@@ -27,6 +27,7 @@ button.addEventListener("click", () => {
         };
     };
     randomColor();
+    eraseColor();
 });
 
 
@@ -42,4 +43,17 @@ function randomColor() {
         });
     });   
 };
+
+
+function eraseColor() {
+    const boxes = document.querySelectorAll(".box");
+    const clear = document.querySelector(".clear");
+    clear. addEventListener("click", () => {
+        boxes.forEach((box) => {
+            box.style.backgroundColor = "white";
+        });
+    });
+};
+
 randomColor();
+eraseColor()
